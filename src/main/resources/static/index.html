@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vagas Massimo</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css">
+
+<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.html5.min.js"></script>
+
+<style type="text/css" class="init">
+	
+	div.container {
+		width: 80%;
+	}
+	
+	#example_wrapper {
+		width: 80%;
+	}
+
+	</style>
+
+<script type="text/javascript" class="init">
+	
+$(document).ready(function() {
+	$('#example').DataTable( {
+		"ajax": {
+			"url": "http://localhost:8080/sorteio",
+			"dataSrc": ""
+		},
+		"columns": [
+			{ "data": "apto" },
+			{ "data": "vaga" }
+		],
+		"paging": false,
+		dom: 'Bfrtip',
+		buttons: [
+            'excelHtml5',
+            'csvHtml5',
+            'pdfHtml5'
+        ]
+	} );
+} );
+
+	</script>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+  	<div class="col-md-12">
+  		<h1>Sorteio de Vagas Massimo</h1>
+  	</div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      
+      
+	<table id="example" class="display" style="width:100%">
+		<thead>
+			<tr>
+				<th>Apto</th>
+				<th>Vaga</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<th>Apto</th>
+				<th>Vaga</th>
+			</tr>
+		</tfoot>
+	</table>
+      
+      
+      
+    </div>
+    
+  </div>
+</div>
+
+
+</body>
+</html>
