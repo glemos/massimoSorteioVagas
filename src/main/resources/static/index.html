@@ -35,11 +35,14 @@
 	</style>
 
 <script type="text/javascript" class="init">
-	
+
+var protocol = window.location.protocol;
+var hostname = window.location.hostname;
+var port = window.location.port;
 $(document).ready(function() {
 	$('#example').DataTable( {
 		"ajax": {
-			"url": "http://localhost:8080/sorteio",
+			"url": protocol+"//"+hostname+":"+port+"/sorteio",
 			"dataSrc": ""
 		},
 		"columns": [
