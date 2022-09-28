@@ -62,6 +62,8 @@ public class SorteioService {
 			listaVagas.add(vaga);
 
 		}
+		
+		adicionaVagasTipoB2SubsoloTras(vagasTipoBTras);
 
 		for (int i = 0; i < aptosTras.size(); i++) {
 			VagaDTO vaga = new VagaDTO();
@@ -329,6 +331,23 @@ public class SorteioService {
 		vagasTipoBTras.add("1 Subsolo - 43");
 		vagasTipoBTras.add("1 Subsolo - 44");
 		vagasTipoBTras.add("1 Subsolo - 45");
+//		vagasTipoBTras.add("2 Subsolo - 1");
+//		vagasTipoBTras.add("2 Subsolo - 2");
+//		vagasTipoBTras.add("2 Subsolo - 3");
+//		vagasTipoBTras.add("2 Subsolo - 4");
+//		vagasTipoBTras.add("2 Subsolo - 5");
+//		vagasTipoBTras.add("2 Subsolo - 6");
+//		vagasTipoBTras.add("2 Subsolo - 7");
+//		vagasTipoBTras.add("2 Subsolo - 8");
+//		vagasTipoBTras.add("2 Subsolo - 9");
+//		vagasTipoBTras.add("2 Subsolo - 14");
+
+		Collections.shuffle(vagasTipoBTras);
+
+	}
+
+	// 32 Vagas
+	private void adicionaVagasTipoB2SubsoloTras(List<String> vagasTipoBTras) {
 		vagasTipoBTras.add("2 Subsolo - 1");
 		vagasTipoBTras.add("2 Subsolo - 2");
 		vagasTipoBTras.add("2 Subsolo - 3");
